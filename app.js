@@ -6,11 +6,12 @@ let count = 0;
 
 
 
-button.addEventListener("click", function(){
+button.addEventListener("click", function(a){
     const number = document.getElementById("number").value;
     const li = document.createElement("li");
     li.className = 'guessingList';
     count += 1;
+    a.preventDefault();
     if (number > 100 && count < 5){
         const text = document.createTextNode(`${count}. Guess. You should enter a number less than 100`)
         li.appendChild(text);
@@ -43,7 +44,7 @@ button.addEventListener('mouseover', () => (button.value = 'SURE !!'));
 button.addEventListener('mouseout', () => (button.value = "Guess"))
 
 function newPage() {
-    window.location.assign("http://127.0.0.1:5500/index.html")
+    window.location.assign("https://erol23.github.io/Guess-Number/")
 }
 
 function empty() {
